@@ -1,14 +1,5 @@
 ---
 
-- include: boto_debian.yml
-  when: ansible_os_family == "Debian"
-
-- include: boto_macos.yml
-  when: ansible_os_family == "Darwin"
-
-- include: boto_redhat.yml
-  when: ansible_os_family == "RedHat"
-
 - name: "Find current, region-specific Windows AMI."
   ec2_ami_find:
     aws_access_key: "{{ aws_access_key_id }}"

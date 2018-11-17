@@ -1,5 +1,0 @@
----
-
-- name: "Install boto with pip."
-  pip: name=boto
-  become: True
